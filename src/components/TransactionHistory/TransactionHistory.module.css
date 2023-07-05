@@ -58,7 +58,8 @@
 .tb_row_unit {
   color: currentColor;
   width: 100px;
-  padding: auto;
+  padding-left: auto;
+  padding-right: auto;
 
   padding-bottom: 10px;
   padding-top: 10px;
