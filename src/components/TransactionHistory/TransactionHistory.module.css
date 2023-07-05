@@ -58,11 +58,7 @@
 .tb_row_unit {
   color: currentColor;
   width: 100px;
-  padding-left: auto;
-  padding-right: auto;
-
-  padding-bottom: 10px;
-  padding-top: 10px;
+  height: 50px;
 
   text-align: center;
   text-transform: capitalize;
