@@ -29,3 +29,35 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.item {
+  padding: 10px;
+  width: calc((100% - 4 * 5px) / 5);
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px 5px rgba(90, 89, 89, 0.75);
+  -webkit-box-shadow: 5px 5px 10px 5px rgba(90, 89, 89, 0.75);
+  -moz-box-shadow: 5px 5px 10px 5px rgba(90, 89, 89, 0.75);
+}
+
+.item:is(:hover, :focus) {
+  transform: translateY(-10px);
+}
+
+.label {
+  color: rgb(255, 255, 255);
+}
+
+.percentage {
+  color: rgb(101, 65, 80);
+}

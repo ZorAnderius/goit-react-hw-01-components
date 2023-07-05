@@ -6,7 +6,9 @@ import friendListCSS from './FriendList.module.css';
 export const FriendList = ({ friends }) => {
   return (
     <ul className={friendListCSS['friend-list']}>
-      <FriendItem friends={friends} />
+      {friends.map(({ id, avatar, name, isOnline }) => (
+        <FriendItem key={id} avatar={avatar} name={name} isOnline={isOnline} />
+      ))}
     </ul>
   );
 };
@@ -14,10 +16,7 @@ export const FriendList = ({ friends }) => {
 FriendList.propTypes = {
   friends: propTypes.arrayOf(
     propTypes.shape({
-      avatar: propTypes.string.isRequired,
       id: propTypes.number.isRequired,
-      isOnline: propTypes.bool.isRequired,
-      name: propTypes.string.isRequired,
     })
   ).isRequired,
 };
